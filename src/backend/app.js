@@ -3,7 +3,7 @@ import cors from 'cors';
 import counterService from './counterService.js';
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 12051;
 
 app.use(cors());
 app.use(express.json());

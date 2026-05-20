@@ -9,7 +9,7 @@ HEALTHCHECK --interval=1s --timeout=120s --start-period=10s --retries=110 \
   CMD curl -f http://localhost:3000/ || exit 1
 
 COPY . .
-RUN apk add --no-cache curl && npm install
+RUN apk add --no-cache curl && npm install && chmod +x /app/docker-entrypoint.sh
 
 ENTRYPOINT [ "/app/docker-entrypoint.sh" ]
 CMD [ "npm", "run", "start"]

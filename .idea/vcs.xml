@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/actions-runner/_work/wat4-2026ss-vz-sample-app/wat4-2026ss-vz-sample-app" vcs="Git" />
   </component>
 </project>

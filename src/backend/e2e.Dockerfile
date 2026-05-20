@@ -8,8 +8,12 @@ WORKDIR /app
 HEALTHCHECK --interval=1s --timeout=120s --start-period=10s --retries=110 \
   CMD curl -f http://localhost:5000/counter || exit 1
 
+RUN apk add --no-cache curl
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
 COPY . .
-RUN apk add --no-cache curl && npm install
 
 CMD [ "npm", "run", "start"]
 
